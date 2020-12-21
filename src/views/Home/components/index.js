@@ -1,0 +1,9 @@
+export { default as DroneInn } from './DroneInn';
+export { default as DroneHostel } from './DroneHostel';
+export { default as DroneHero } from './DroneHero';
+export { default as MapHostel } from './MapHostel';
+export { default as MapInn } from './MapInn';
+export { default as RoomsInn } from './RoomsInn';
+export { default as RoomsHostel } from './RoomsHostel';
+export { default as About } from './About';
+export { default as ContactForm } from './ContactForm';
