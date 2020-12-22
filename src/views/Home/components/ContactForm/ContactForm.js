@@ -92,7 +92,15 @@ const useStyles = makeStyles(theme => ({
   },
   p: {
     width: '100px',
-  }
+  },
+  inputField: {
+    [theme.breakpoints.down('sm')]: {
+      minWidth: '100%',
+    },
+  },
+  formWrap: {
+    [theme.breakpoints.down('sm')]: {},
+  },
 }));
 
 const ContactForm = props => {
@@ -107,6 +115,7 @@ const ContactForm = props => {
   const [roomType, setRoomType] = React.useState('');
 
   const handleChange = event => {
+    event.preventDefault();
     setRoomType(event.target.value);
   };
 
@@ -122,8 +131,6 @@ const ContactForm = props => {
   };
 
   // const [estimatedPrice, setEstimatedPrice] = React.useState('');
-
-
 
   function sendEmail(e) {
     e.preventDefault();
@@ -169,7 +176,8 @@ const ContactForm = props => {
             type="text"
           />
         </Grid>
-        <Grid item xs={12} sm={6} data-aos="fade-up">
+
+        <Grid item xs={12} sm={6} data-aos="fade-up" style={{ flex: 1 }}>
           <Typography
             variant="subtitle1"
             color="textPrimary"
@@ -178,12 +186,13 @@ const ContactForm = props => {
             Telefonszám
           </Typography>
           <TextField
+            className={classes.inputField}
             color={isMd ? 'primary' : 'secondary'}
             placeholder="Elerhetoseged"
             variant="outlined"
             size="medium"
             name="phone"
-            fullWidth
+            // fullWidth
             type="tel"
           />
         </Grid>
@@ -197,6 +206,7 @@ const ContactForm = props => {
             E-mail
           </Typography>
           <TextField
+            style={{ marginLeft: '2px' }}
             placeholder="Az e-mail címed"
             variant="outlined"
             size="medium"
@@ -229,7 +239,13 @@ const ContactForm = props => {
 
     //Roomtype - Arrival - Departure
     return (
-      <Grid container direction="row" justify="center" alignItems="center">
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+        className={classes.formWrap}
+      >
         <Grid item xs={12} sm={3} data-aos="fade-up">
           <FormControl className={classes.formControl}>
             <InputLabel id="demo-simple-select-helper-label">
@@ -255,7 +271,7 @@ const ContactForm = props => {
             id="arrivaldate"
             label="Érkezés"
             type="date"
-            onChange={(handleArrivalDateChange)}
+            onChange={handleArrivalDateChange}
             value={arrivalDate}
             className={classes.textField}
             InputLabelProps={{
@@ -269,7 +285,7 @@ const ContactForm = props => {
             id="departuredate"
             label="Távozás"
             type="date"
-            onChange={(handleDepartureDateChange)}
+            onChange={handleDepartureDateChange}
             value={departureDate}
             className={classes.textField}
             InputLabelProps={{
@@ -282,21 +298,21 @@ const ContactForm = props => {
   };
 
   const calculatePrice = () => {
-      let arrival = new Date(arrivalDate);
-      let departure = new Date(departureDate);
-      var one_day = 1000 * 60 * 60 * 24;
-      let dateDiff = Math.ceil(
-        (departure.getTime() - arrival.getTime()) / one_day,
-      );
+    let arrival = new Date(arrivalDate);
+    let departure = new Date(departureDate);
+    var one_day = 1000 * 60 * 60 * 24;
+    let dateDiff = Math.ceil(
+      (departure.getTime() - arrival.getTime()) / one_day,
+    );
 
     if (roomType === 'doubleRoom') {
-      return 69 * dateDiff
-    } else if (roomType === 'tripleRoom') { 
-      return 79 * dateDiff
+      return 69 * dateDiff;
+    } else if (roomType === 'tripleRoom') {
+      return 79 * dateDiff;
     } else if (roomType === 'dormRoom') {
-      return 19 * dateDiff
+      return 19 * dateDiff;
     }
-  }
+  };
 
   const EstimatedPrice = () => {
     if (Number.isInteger(calculatePrice())) {
@@ -304,6 +320,7 @@ const ContactForm = props => {
         <Grid container>
           <Grid item xs={12} sm={12} data-aos="fade-up">
             <SectionHeader
+              style={{ marginTop: 3 }}
               title={
                 <>
                   <span className={clsx(classes.whiteText)}>
@@ -325,15 +342,16 @@ const ContactForm = props => {
             />
           </Grid>
           <Grid item xs={12} sm={12} data-aos="fade-up" className={classes.p}>
-            <p>
-              Ez az összeg a jelenlegi árfolyamunkon alapul, nem tartalmazza az
+            <Typography color="textSecondary">
+              *Estimated price only. Please get in touch for an accurate quote.
+              {/* Ez az összeg a jelenlegi árfolyamunkon alapul, nem tartalmazza az
               IFÁ-t és csak tájékoztatás szempontjából van. Emailben fogjuk
-              küldeni a pontos árajánlatunkat a többi információval együtt.
-            </p>
+              küldeni a pontos árajánlatunkat a többi információval együtt. */}
+            </Typography>
           </Grid>
         </Grid>
       );
-    }  else return null;
+    } else return null;
   };
 
   return (
@@ -350,7 +368,7 @@ const ContactForm = props => {
             <Grid container spacing={isMd ? 4 : 2}>
               <PersonalDetails />
               <RoomDetails />
-              <EstimatedPrice/>
+              <EstimatedPrice />
               <Grid item container justify="center" xs={12}>
                 <Button
                   variant="contained"

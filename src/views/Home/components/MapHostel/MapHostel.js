@@ -42,7 +42,7 @@ const MapHero = props => {
         leftSide={
           <Grid container spacing={1} data-aos="fade-up">
             <Grid item xs={12}>
-            {/* <SectionHeader
+              {/* <SectionHeader
                
                 title={
                 
@@ -60,6 +60,7 @@ const MapHero = props => {
                 disableGutter
               /> */}
               <SectionHeader
+                label="FŐ UTCA 106, SIÓFOK 8600"
                 title={
                   <span>
                     Szállj meg a

@@ -6,21 +6,26 @@ import { Button } from '@material-ui/core';
 import { SectionHeader, TypedText } from 'components/molecules';
 
 const useStyles = makeStyles(theme => ({
-  root: {},
+  root: {
+    height: 'auto',
+    maxWidth: '100vw',
+    // margin: 'auto',
+  },
   typed: {
     fontWeight: 'bold',
     [theme.breakpoints.down('sm')]: {
+      height: '30px',
       fontSize: '40px',
-    },
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '30px',
+      minWidth: '100vw',
+      maxWidth: '100vw',
+      position: 'absolute',
     },
   },
   whiteText: {
     color: 'white',
     fontSize: '55px',
     [theme.breakpoints.down('sm')]: {
-      visibility: 'hidden',
+      display: 'none',
     },
   },
 }));
