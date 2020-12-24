@@ -41,7 +41,7 @@ export const roomsInn = [
          },
          {
            image: {
-             src: '/assets/images/photos/muller/Inn/doubleRooms/inn_double.jpg',
+             src: '/assets/images/photos/muller/Inn/doubleRooms/Inn_double.jpg',
            },
            price: '€69-tól',
            location: 'Fő utca 106, Siófok',
