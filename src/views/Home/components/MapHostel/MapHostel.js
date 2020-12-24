@@ -60,7 +60,7 @@ const MapHero = props => {
                 disableGutter
               /> */}
               <SectionHeader
-                label="FŐ UTCA 106, SIÓFOK 8600"
+                label="KÁLMÁN IMRE STNY. 9"
                 title={
                   <span>
                     Szállj meg a

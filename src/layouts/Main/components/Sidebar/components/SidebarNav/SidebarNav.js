@@ -1,6 +1,7 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -166,6 +167,8 @@ const SidebarNav = props => {
         });
       };
 
+
+
   return (
     <List {...rest} className={clsx(classes.root, className)}>
       <ListItem className={classes.closeIcon} onClick={onClose}>
@@ -175,47 +178,53 @@ const SidebarNav = props => {
       </ListItem>
 
       <ListItem className={classes.listItem}>
-        <Typography
-          variant="h6"
-          color="primary"
-          component="a"
-          target="blank"
-          href="/gallery"
-        >
-          Galéria
-        </Typography>
+        <Link to="/gallery">
+          <Typography
+            variant="h6"
+            color="primary"
+            component="a"
+            target="blank"
+            onClick={() => onClose()}
+          >
+            Galéria
+          </Typography>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Typography
-          variant="h6"
-          color="primary"
-          component="a"
-          target="blank"
-          href="/bloglist"
-        >
-          Blog
-        </Typography>
+        <Link to="/bloglist">
+          <Typography
+            variant="h6"
+            color="primary"
+            component="a"
+            target="blank"
+            onClick={() => onClose()}
+          >
+            Blog
+          </Typography>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Typography
-          variant="h6"
-          color="primary"
-          component="a"
-          target="blank"
-          onClick={() => scrollTo('contact')}
-        >
-          Kontakt
-        </Typography>
+        <Link to="/home">
+          <Typography
+            variant="h6"
+            color="primary"
+            component="a"
+            target="blank"
+            onClick={() => scrollTo('contact')}
+          >
+            Kontakt
+          </Typography>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
           size="large"
           variant="contained"
-          color="primary"
+          color="secondary"
           fullWidth
           component="a"
           target="blank"
-          href="https://material-ui.com/store/items/the-front-landing-page/"
+          href="https://www.booking.com/hotel/hu/muller-s-inn.hu.html?aid=356980;label=gog235jc-1DCAsoZ0IMbXVsbGVyLXMtaW5uSDNYA2i2AYgBAZgBEbgBB8gBDNgBA-gBAYgCAagCA7gCoODT_gXAAgHSAiRjYmQzNjc5Ni0zYjUwLTRmMWQtOTM1YS1iOGI2NGJmZGJmYWbYAgTgAgE;sid=d79095d1eb660a71d638d76c1603272c;dist=0&keep_landing=1&sb_price_type=total&type=total&#availability"
         >
           Foglalok
         </Button>

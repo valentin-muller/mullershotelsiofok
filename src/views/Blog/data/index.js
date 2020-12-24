@@ -39,12 +39,12 @@ export const content = {
          imagesFurdo: [
            {
              src: '/assets/images/photos/muller/Blog/furdo_1.jpeg',
-             srcSet: '/assets/images/photos/muller/Blog/furdo_1.jpg 2x',
+             srcSet: '/assets/images/photos/muller/Blog/furdo_1.jpeg 2x',
              cols: 1,
            },
            {
              src: '/assets/images/photos/muller/Blog/furdo_2.jpeg',
-             srcSet: '/assets/images/photos/muller/Blog/furdo_2.jpg 2x',
+             srcSet: '/assets/images/photos/muller/Blog/furdo_2.jpeg 2x',
              cols: 1,
            },
          ],

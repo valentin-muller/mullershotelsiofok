@@ -219,8 +219,8 @@ const RoomsInn = props => {
           </Grid>
         ))}
         <Grid item xs={12} container justify="center" data-aos="fade-up">
-          <Button variant="outlined" color="primary" href="/gallery">
-                        Többi fénykép
+          <Button variant="outlined" color="secondary" href="/gallery">
+                        Több fénykép
           </Button>
         </Grid>
       </Grid>

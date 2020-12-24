@@ -146,7 +146,7 @@ const Topbar = props => {
     window.location.reload();
   };
 
-  const scrollTo = id => {
+  const redirectContact = id => {
     setTimeout(() => {
       const element = document.querySelector(`#${id}`);
       if (!element) {
@@ -207,20 +207,21 @@ const Topbar = props => {
           <Typography
             variant="body1"
             color="textSecondary"
-            href="/bloglist"
             className={classes.menuButton}
           >
             Blog
           </Typography>
         </Link>
-        <Typography
-          variant="body1"
-          color="textSecondary"
-          onClick={() => scrollTo('contact')}
-          className={classes.kontakt}
-        >
-          Kontakt
-        </Typography>
+        <Link to='/home'>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            onClick={() => redirectContact('contact')}
+            className={classes.kontakt}
+          >
+            Kontakt
+          </Typography>
+        </Link>
       </Hidden>
 
       <Hidden mdUp>

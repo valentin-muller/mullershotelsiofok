@@ -148,7 +148,7 @@ const Main = props => {
                   className={clsx('folio__image', classes.image)}
                   lazy={false}
                 />
-                <div
+                {/* <div
                   className={clsx(
                     'folio__info-wrapper',
                     classes.folioInfoWrapper,
@@ -170,7 +170,7 @@ const Main = props => {
                       {item.subtitle}
                     </Typography>
                   </div>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

@@ -81,6 +81,9 @@ const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+    },
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -98,9 +101,24 @@ const useStyles = makeStyles(theme => ({
       minWidth: '100%',
     },
   },
-  formWrap: {
-    [theme.breakpoints.down('sm')]: {},
+  textField: {
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+      paddingLeft: '10%',
+    },
   },
+  datesGrid: {
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: '5%',
+      paddingTop: '5%',
+    },
+  },
+
+  // formWrap: {
+  //   [theme.breakpoints.down('sm')]: {
+  //     paddingLeft: '30%',
+  //   },
+  // },
 }));
 
 const ContactForm = props => {
@@ -220,23 +238,6 @@ const ContactForm = props => {
   };
 
   const RoomDetails = () => {
-    // const [roomType, setRoomType] = React.useState('');
-
-    // const handleChange = event => {
-    //   setRoomType(event.target.value);
-    // };
-
-    // const [arrivalDate, setArrivalDate] = React.useState('');
-
-    // const handleArrivalDateChange = event => {
-    //   setArrivalDate(event.target.value);
-    // };
-    // const [departureDate, setDepartureDate] = React.useState('');
-
-    // const handleDepartureDateChange = event => {
-    //   setDepartureDate(event.target.value);
-    // };
-
     //Roomtype - Arrival - Departure
     return (
       <Grid
@@ -265,7 +266,13 @@ const ContactForm = props => {
             <FormHelperText>Válaszd ki a szobatípust</FormHelperText>
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={3} data-aos="fade-up">
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          data-aos="fade-up"
+          className={classes.datesGrid}
+        >
           <TextField
             name="arrivalDate"
             id="arrivaldate"
@@ -279,7 +286,13 @@ const ContactForm = props => {
             }}
           />
         </Grid>
-        <Grid item xs={12} sm={3} data-aos="fade-up">
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          data-aos="fade-up"
+          className={(classes.datesGrid)}
+        >
           <TextField
             name="departureDate"
             id="departuredate"
@@ -369,7 +382,12 @@ const ContactForm = props => {
               <PersonalDetails />
               <RoomDetails />
               <EstimatedPrice />
-              <Grid item container justify="center" xs={12}>
+              <Grid
+                item
+                container
+                justify="center"
+                xs={12}
+              >
                 <Button
                   variant="contained"
                   type="submit"

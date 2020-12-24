@@ -43,7 +43,7 @@ const MapHero = props => {
           <Grid container spacing={1} data-aos="fade-up">
             <Grid item xs={12}>
               <SectionHeader
-                label="KÁLMÁN IMRE STNY. 9, SIÓFOK 8600"
+                label="FŐ UTCA 106"
                 title={
                   <span>
                     Szállj meg a
