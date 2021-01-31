@@ -88,7 +88,7 @@ const RoomsInn = props => {
     <div className={clsx(classes.root, className)} {...rest}>
       <SectionHeader
         title="Fő utcai szobaválasztékunk"
-        subtitle="Válaszd ezt a szálláshelyünket, ha kényelmesen szeretnél pihenni. Zárt parkolóval és egésznapos recepcióval várunk. Ideális a családoknak és baráti társaságoknak. Különböző szállástípusokból választhatsz:"
+        subtitle="Válaszd ezt a szálláshelyünket, ha kényelmesen szeretnél pihenni. Zárt parkolóval és recepcióval várunk. Ideális a családoknak és baráti társaságoknak. Különböző szállástípusokból választhatsz:"
         data-aos="fade-up"
       />
       <Grid container spacing={isMd ? 4 : 2}>

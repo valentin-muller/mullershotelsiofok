@@ -193,6 +193,16 @@ const Topbar = props => {
       <div className={classes.flexGrow} />
 
       <Hidden smDown>
+        <Link to="/pricing">
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            className={classes.menuButton}
+          >
+            Árak
+          </Typography>
+        </Link>
+
         <Link to="/gallery">
           <Typography
             variant="body1"

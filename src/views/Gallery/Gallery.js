@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Section, SectionAlternate } from 'components/organisms';
+// import { SwiperImage } from 'components/molecules';
 import { Main, Modal } from './components';
 
 import { folioHostel, folioInn, folioTitleInn, folioTitleHostel } from './data';

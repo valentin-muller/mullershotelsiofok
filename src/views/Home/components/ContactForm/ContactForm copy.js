@@ -119,11 +119,6 @@ const useStyles = makeStyles(theme => ({
   //     paddingLeft: '30%',
   //   },
   // },
-
-  formSentText: {
-    paddingLeft: '2%',
-    fontSize: '20px',
-  },
 }));
 
 const ContactForm = props => {
@@ -135,10 +130,9 @@ const ContactForm = props => {
     defaultMatches: true,
   });
 
-  const [formSent, setFormSent] = React.useState(0);
-
   const [name, setName] = React.useState('');
   const handleNameChange = event => {
+    event.preventDefault();
     setName(event.target.value);
   };
 
@@ -160,8 +154,6 @@ const ContactForm = props => {
   function sendEmail(e) {
     e.preventDefault();
 
-    setFormSent(1);
-
     emailjs
       .sendForm(
         'service_7mno5xj',
@@ -180,7 +172,146 @@ const ContactForm = props => {
     e.target.reset();
   }
 
+  const PersonalDetails = () => {
+    // Name
+    // Phone Number and Email
+    return (
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Grid item xs={12} sm={12} data-aos="fade-up">
+          <Typography
+            variant="subtitle1"
+            color="textPrimary"
+            className={classes.inputTitle}
+          >
+            Teljes Név
+          </Typography>
+          <TextField
+            color={isMd ? 'primary' : 'secondary'}
+            placeholder="Teljes Név"
+            variant="outlined"
+            size="medium"
+            name="fullname"
+            fullWidth
+            type="text"
+            value={name}
+            onChange={handleNameChange}
+          />
+        </Grid>
 
+        <Grid item xs={12} sm={6} data-aos="fade-up" style={{ flex: 1 }}>
+          <Typography
+            variant="subtitle1"
+            color="textPrimary"
+            className={classes.inputTitle}
+          >
+            Telefonszám
+          </Typography>
+          <TextField
+            className={classes.inputField}
+            color={isMd ? 'primary' : 'secondary'}
+            placeholder="Elerhetoseged"
+            variant="outlined"
+            size="medium"
+            name="phone"
+            // fullWidth
+            type="tel"
+          />
+        </Grid>
+
+        <Grid item xs={12} sm={6} data-aos="fade-up">
+          <Typography
+            variant="subtitle1"
+            color="textPrimary"
+            className={classes.inputTitle}
+          >
+            E-mail
+          </Typography>
+          <TextField
+            style={{ marginLeft: '2px' }}
+            placeholder="Az e-mail címed"
+            variant="outlined"
+            size="medium"
+            name="email"
+            fullWidth
+            type="email"
+          />
+        </Grid>
+      </Grid>
+    );
+  };
+
+  const RoomDetails = () => {
+    //Roomtype - Arrival - Departure
+    return (
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="center"
+        className={classes.formWrap}
+      >
+        <Grid item xs={12} sm={3} data-aos="fade-up">
+          <FormControl className={classes.formControl}>
+            <InputLabel id="demo-simple-select-helper-label">
+              Szobatípus
+            </InputLabel>
+            <Select
+              name="roomType"
+              labelId="demo-simple-select-helper-label"
+              id="demo-simple-select-helper"
+              value={roomType}
+              onChange={handleChange}
+            >
+              <MenuItem value="doubleRoom">Kétágyas</MenuItem>
+              <MenuItem value="tripleRoom">Háromágyas</MenuItem>
+              <MenuItem value="dormRoom">Hostel ágy</MenuItem>
+            </Select>
+            <FormHelperText>Válaszd ki a szobatípust</FormHelperText>
+          </FormControl>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          data-aos="fade-up"
+          className={classes.datesGrid}
+        >
+          <TextField
+            name="arrivalDate"
+            id="arrivaldate"
+            label="Érkezés"
+            type="date"
+            onChange={handleArrivalDateChange}
+            value={arrivalDate}
+            className={classes.textField}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          data-aos="fade-up"
+          className={classes.datesGrid}
+        >
+          <TextField
+            name="departureDate"
+            id="departuredate"
+            label="Távozás"
+            type="date"
+            onChange={handleDepartureDateChange}
+            value={departureDate}
+            className={classes.textField}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+        </Grid>
+      </Grid>
+    );
+  };
 
   const calculatePrice = () => {
     let arrival = new Date(arrivalDate);
@@ -200,7 +331,7 @@ const ContactForm = props => {
   };
 
   const EstimatedPrice = () => {
-    if (Number.isInteger(calculatePrice()) && formSent === 0) {
+    if (Number.isInteger(calculatePrice())) {
       return (
         <Grid container>
           <Grid item xs={12} sm={12} data-aos="fade-up">
@@ -228,19 +359,13 @@ const ContactForm = props => {
           </Grid>
           <Grid item xs={12} sm={12} data-aos="fade-up" className={classes.p}>
             <Typography color="textSecondary">
-              {/* *Estimated price only. Please get in touch for an accurate quote. */}
-              Ez az összeg a jelenlegi árfolyamunkon alapul, nem tartalmazza az
+              *Estimated price only. Please get in touch for an accurate quote.
+              {/* Ez az összeg a jelenlegi árfolyamunkon alapul, nem tartalmazza az
               IFÁ-t és csak tájékoztatás szempontjából van. Emailben fogjuk
-              küldeni a pontos árajánlatunkat a többi információval együtt.
+              küldeni a pontos árajánlatunkat a többi információval együtt. */}
             </Typography>
           </Grid>
         </Grid>
-      );
-    } if(formSent === 1) {
-      return (
-        <Typography color="textPrimary" className={classes.formSentText}>
-          Köszönjük az érdeklődést, hamarosan jelentkezünk telefonon vagy emailben 👍🏼😊
-        </Typography>
       );
     } else return null;
   };
@@ -257,145 +382,8 @@ const ContactForm = props => {
         <div className={classes.form}>
           <form onSubmit={sendEmail}>
             <Grid container spacing={isMd ? 4 : 2}>
-              <Grid
-                container
-                direction="row"
-                justify="center"
-                alignItems="center"
-              >
-                <Grid item xs={12} sm={12} data-aos="fade-up">
-                  <Typography
-                    variant="subtitle1"
-                    color="textPrimary"
-                    className={classes.inputTitle}
-                  >
-                    Teljes Név
-                  </Typography>
-                  <TextField
-                    color={isMd ? 'primary' : 'secondary'}
-                    placeholder="Teljes Név"
-                    variant="outlined"
-                    size="medium"
-                    name="fullname"
-                    fullWidth
-                    type="text"
-                    value={name}
-                    onChange={handleNameChange}
-                  />
-                </Grid>
-
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  data-aos="fade-up"
-                  style={{ flex: 1 }}
-                >
-                  <Typography
-                    variant="subtitle1"
-                    color="textPrimary"
-                    className={classes.inputTitle}
-                  >
-                    Telefonszám
-                  </Typography>
-                  <TextField
-                    className={classes.inputField}
-                    color={isMd ? 'primary' : 'secondary'}
-                    placeholder="Elerhetoseged"
-                    variant="outlined"
-                    size="medium"
-                    name="phone"
-                    // fullWidth
-                    type="tel"
-                  />
-                </Grid>
-
-                <Grid item xs={12} sm={6} data-aos="fade-up">
-                  <Typography
-                    variant="subtitle1"
-                    color="textPrimary"
-                    className={classes.inputTitle}
-                  >
-                    E-mail
-                  </Typography>
-                  <TextField
-                    style={{ marginLeft: '2px' }}
-                    placeholder="Az e-mail címed"
-                    variant="outlined"
-                    size="medium"
-                    name="email"
-                    fullWidth
-                    type="email"
-                  />
-                </Grid>
-              </Grid>
-              <Grid
-                container
-                direction="row"
-                justify="space-around"
-                alignItems="center"
-                className={classes.formWrap}
-              >
-                <Grid item xs={12} sm={3} data-aos="fade-up">
-                  <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-helper-label">
-                      Szobatípus
-                    </InputLabel>
-                    <Select
-                      name="roomType"
-                      labelId="demo-simple-select-helper-label"
-                      id="demo-simple-select-helper"
-                      value={roomType}
-                      onChange={handleChange}
-                    >
-                      <MenuItem value="doubleRoom">Kétágyas</MenuItem>
-                      <MenuItem value="tripleRoom">Háromágyas</MenuItem>
-                      <MenuItem value="dormRoom">Hostel ágy</MenuItem>
-                    </Select>
-                    <FormHelperText>Válaszd ki a szobatípust</FormHelperText>
-                  </FormControl>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={3}
-                  data-aos="fade-up"
-                  className={classes.datesGrid}
-                >
-                  <TextField
-                    name="arrivalDate"
-                    id="arrivaldate"
-                    label="Érkezés"
-                    type="date"
-                    onChange={handleArrivalDateChange}
-                    value={arrivalDate}
-                    className={classes.textField}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={3}
-                  data-aos="fade-up"
-                  className={classes.datesGrid}
-                >
-                  <TextField
-                    name="departureDate"
-                    id="departuredate"
-                    label="Távozás"
-                    type="date"
-                    onChange={handleDepartureDateChange}
-                    value={departureDate}
-                    className={classes.textField}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-                </Grid>
-              </Grid>
+              <PersonalDetails />
+              <RoomDetails />
               <EstimatedPrice />
               <Grid item container justify="center" xs={12}>
                 <Button

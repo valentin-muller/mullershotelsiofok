@@ -178,6 +178,19 @@ const SidebarNav = props => {
       </ListItem>
 
       <ListItem className={classes.listItem}>
+        <Link to="/pricing">
+          <Typography
+            variant="h6"
+            color="primary"
+            component="a"
+            target="blank"
+            onClick={() => onClose()}
+          >
+            Árak
+          </Typography>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <Link to="/gallery">
           <Typography
             variant="h6"
