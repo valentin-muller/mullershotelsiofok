@@ -252,7 +252,7 @@ const ContactForm = props => {
           title="Ajánlatkérés"
           subtitle="Az üzenet mezőben írd meg a foglalásal kapcsolatos információkat."
           data-aos="fade-up"
-          align="left"
+          align="center"
         />
         <div className={classes.form}>
           <form onSubmit={sendEmail}>

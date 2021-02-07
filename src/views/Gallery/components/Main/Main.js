@@ -120,7 +120,7 @@ const Main = props => {
         // color="secondary"
       >
         {mainTitle.text}
-        <TypedText
+        {/* <TypedText
           component="span"
           variant="h2"
           color="secondary"
@@ -130,7 +130,7 @@ const Main = props => {
             typeSpeed: 50,
             loop: false,
           }}
-        />
+        /> */}
       </Typography>
       <div className={classes.grid}>
         {wrapper.map((column, i) => (

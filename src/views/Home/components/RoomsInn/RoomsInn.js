@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   useMediaQuery,
@@ -72,6 +73,9 @@ const useStyles = makeStyles(theme => ({
   },
   divider: {
     margin: theme.spacing(3, 0, 2, 0),
+  },
+  bottomButton: {
+    paddingTop: '35px',
   },
 }));
 
@@ -202,10 +206,11 @@ const RoomsInn = props => {
                   data-aos="fade-up"
                 >
                   <Button
-                    variant="contained"
+                    variant="outlined"
                     color="secondary"
                     href={item.link}
                     target="_blank"
+                    size="medium"
                   >
                     Foglalok
                   </Button>
@@ -214,10 +219,28 @@ const RoomsInn = props => {
             </Card>
           </Grid>
         ))}
-        <Grid item xs={12} container justify="center" data-aos="fade-up">
-          <Button variant="outlined" color="secondary" href="/gallery">
-            Több fénykép
-          </Button>
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        spacing={4}
+        className={classes.bottomButton}
+      >
+        <Grid item>
+          <Link to="/pricing">
+            <Button color="primary" variant="text" size="large" xs={6}>
+              Árak
+            </Button>
+          </Link>
+        </Grid>
+        <Grid item>
+          <Link to="/gallery">
+            <Button color="secondary" variant="text" size="large" xs={6}>
+              Galéria
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     </div>

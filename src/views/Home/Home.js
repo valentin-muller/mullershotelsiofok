@@ -50,14 +50,14 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#0000008a',
   },
   hero: {
-    position: 'absolute',
-    zIndex: '1',
-    top: '20%',
-    left: '29%',
-    [theme.breakpoints.down('sm')]: {
-      left: '0px',
-      top: '33%',
-    },
+    // position: 'absolute',
+    // zIndex: '1',
+    // top: '20%',
+    // left: '19%',
+    // [theme.breakpoints.down('sm')]: {
+    //   left: '0px',
+    //   top: '33%',
+    // },
   },
   bothSides: {
     width: '50%',

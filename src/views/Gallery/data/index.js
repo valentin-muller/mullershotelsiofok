@@ -84,9 +84,9 @@ export const folioHostel = [
     h: 500,
   },
 ];
-export const folioTitleInn = { text: 'Fő utca 106 📍' };
+export const folioTitleInn = { text: '📍Fő utca 106' };
 
-export const folioTitleHostel = { text: 'Kálmán Imre stny 9 📍' };
+export const folioTitleHostel = { text: '📍Kálmán Imre stny. 9' };
 
 export const folioInn = [
   {

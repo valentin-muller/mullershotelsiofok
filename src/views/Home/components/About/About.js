@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   listItem: {
     display: 'flex',
     alignItems: 'center',
-    marginLeft: '20%',
+    paddingLeft: '20%',
     [theme.breakpoints.down('sm')]: {
       alignItems: 'center',
       mmargin: 'auto',
@@ -47,15 +47,6 @@ const useStyles = makeStyles(theme => ({
   icon: {
     background: 'transparent',
     borderRadius: 0,
-  },
-  header: {
-    // paddingRight: '35%',
-    width: '100%',
-    [theme.breakpoints.down('sm')]: {
-      width: '80%',
-      display: 'flex',
-      margin: 'auto',
-    },
   },
 }));
 
@@ -71,7 +62,6 @@ const About = props => {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <SectionHeader
-        className={classes.header}
         title="Elérhetőségünk"
         subtitle="Szobafoglalással, vagy bármilyen kérdéssel kapcsolatban állunk rendelkezésedre a hét minden napján."
         data-aos="fade-up"

@@ -9,7 +9,7 @@ export const content = {
          textFurdo:
            'A megújult fürdőkkel a szobák is további komfortfokozatot kaptak. Az esztétikus megjelenés az ott lakók kényelmét jól szolgálja. A fürdőszobában zuhanyzótálca van, pratikus és higiénikus. Panziónk minden szobájához tartozik fürdőszoba, ezek közül a fele teljeskörű felújításra került. Újra csempéztük őket és kicseréltük a szanitereket.',
          textAblak:
-           'A felújítási program keretében nyílászárókat cseréltünk mindkét szálláshelyünkön. A jó hő és hangszigeteléssel hozzájárulnak vendégeink nyugott pihenéséhez.  IDE TECHNICAI ADATOK JÖNNEK. Élettartam, stb stb ',
+           'A felújítási program keretében nyílászárókat cseréltünk mindkét szálláshelyünkön. A jó hő és hangszigeteléssel hozzájárulnak vendégeink nyugott pihenéséhez.',
          subtitle:
            'A Kisfaludy pályázaton elnyert összegből nagy felújítást végzünk az idén.',
          author: {
@@ -21,18 +21,18 @@ export const content = {
            date: 'Dec 13, 2020',
          },
          cover: {
-           src: '/assets/images/photos/muller/Blog/outside_3.jpg',
-           srcSet: '/assets/images/photos/muller/Blog/outside_3.jpg 2x',
+           src: '/assets/images/photos/muller/Blog/outside_3.jpeg',
+           srcSet: '/assets/images/photos/muller/Blog/outside_3.jpeg 2x',
          },
          imagesAblak: [
            {
-             src: '/assets/images/photos/muller/Blog/outside_5.jpg',
-             srcSet: '/assets/images/photos/muller/Blog/outside_5.jpg 2x',
+             src: '/assets/images/photos/muller/Blog/outside_5.jpeg',
+             srcSet: '/assets/images/photos/muller/Blog/outside_5.jpeg 2x',
              cols: 1,
            },
            {
-             src: '/assets/images/photos/muller/Blog/outside_6.jpg',
-             srcSet: '/assets/images/photos/muller/Blog/outside_6.jpg 2x',
+             src: '/assets/images/photos/muller/Blog/outside_6.jpeg',
+             srcSet: '/assets/images/photos/muller/Blog/outside_6.jpeg 2x',
              cols: 1,
            },
          ],
@@ -50,23 +50,23 @@ export const content = {
          ],
          imagesSolar: [
            {
-             src: '/assets/images/photos/muller/Blog/dji/dji_kalman.jpg',
-             srcSet: '/assets/images/photos/muller/Blog/dji/dji_kalman.jpg 2x',
+             src: '/assets/images/photos/muller/Blog/dji/dji_kalman.jpeg',
+             srcSet: '/assets/images/photos/muller/Blog/dji/dji_kalman.jpeg 2x',
              cols: 1,
            },
            {
-             src: '/assets/images/photos/muller/Blog/dji/dji_foutca.jpg',
-             srcSet: '/assets/images/photos/muller/Blog/dji/dji_foutca.jpg 2x',
+             src: '/assets/images/photos/muller/Blog/dji/dji_foutca.jpeg',
+             srcSet: '/assets/images/photos/muller/Blog/dji/dji_foutca.jpeg 2x',
              cols: 1,
            },
            {
-             src: '/assets/images/photos/muller/Blog/dji/dji_foutca2.jpg',
-             srcSet: '/assets/images/photos/muller/Blog/dji/dji_foutca2.jpg 2x',
+             src: '/assets/images/photos/muller/Blog/dji/dji_foutca2.jpeg',
+             srcSet: '/assets/images/photos/muller/Blog/dji/dji_foutca2.jpeg 2x',
              cols: 2,
            },
            {
-             src: '/assets/images/photos/muller/Blog/dji/dji_kalman2.jpg',
-             srcSet: '/assets/images/photos/muller/Blog/dji/dji_kalman2.jpg 2x',
+             src: '/assets/images/photos/muller/Blog/dji/dji_kalman2.jpeg',
+             srcSet: '/assets/images/photos/muller/Blog/dji/dji_kalman2.jpeg 2x',
              cols: 2,
            },
          ],

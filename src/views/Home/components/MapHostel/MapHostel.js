@@ -85,24 +85,24 @@ const MapHero = props => {
               <div className={classes.placementGrid}>
                 <div>
                   <CountUpNumber
-                    end={200}
-                    label="Petofi Setany"
+                    end={400}
+                    label="Petőfi sétany"
                     textColor="secondary"
                     suffix=" méter"
                   />
                 </div>
                 <div className={classes.placementGridItemMiddle}>
                   <CountUpNumber
-                    end={300}
-                    label="Szabad Strand"
+                    end={400}
+                    label="strand"
                     textColor="secondary"
                     suffix=" méter"
                   />
                 </div>
                 <div>
                   <CountUpNumber
-                    end={150}
-                    label="Vonat állomás"
+                    end={200}
+                    label="vasútállomás"
                     textColor="secondary"
                     suffix=" méter"
                   />

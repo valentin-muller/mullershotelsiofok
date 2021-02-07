@@ -21,10 +21,10 @@ const Pricing = () => {
       {/* <SectionAlternate>
         <Support />
       </SectionAlternate> */}
-      {/* <Section>
+      <Section id="faq">
         <Faq data={faq} />
       </Section>
-      <SectionAlternate>
+      {/* <SectionAlternate>
         <Plans data={plans} />
       </SectionAlternate> */}
     </div>

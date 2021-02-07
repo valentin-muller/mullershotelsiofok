@@ -230,6 +230,19 @@ const SidebarNav = props => {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
+        <Link to="/pricing">
+          <Typography
+            variant="h6"
+            color="primary"
+            component="a"
+            target="blank"
+            onClick={() => scrollTo('faq')}
+          >
+            GY.I.K.
+          </Typography>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
         <Button
           size="large"
           variant="contained"

@@ -1,6 +1,6 @@
 export const pricings = [
          {
-           title: 'Kétágyas comfort szoba',
+           title: '2-fős comfort szoba',
            subtitle: "📍 Fő utca 106, Müller's Inn",
            eloszezon: 38,
            szezon: 70,
@@ -25,16 +25,16 @@ export const pricings = [
              },
            ],
            features: [
-             'Légkondi',
-             'Ingyenes WiFi',
+             'Légkondicionált',
              'Privát fürdőszoba',
+             'Ingyenes WiFi',
              'TV-vel felszerelt',
            ],
            disclaimer: 'Az ár az idegenforgalmi adót nem tartalmazza.',
            isHighlighted: false,
          },
          {
-           title: 'Háromágyas comfort szoba',
+           title: '3-fős comfort szoba',
            subtitle: "📍 Fő utca 106, Müller's Inn",
            eloszezon: 48,
            szezon: 80,
@@ -59,9 +59,9 @@ export const pricings = [
              },
            ],
            features: [
-             'Légkondi',
-             'Ingyenes WiFi',
+             'Légkondicionált',
              'Privát fürdőszoba',
+             'Ingyenes WiFi',
              'TV-vel felszerelt',
            ],
            disclaimer: 'Az ár az idegenforgalmi adót nem tartalmazza.',
@@ -90,16 +90,16 @@ export const pricings = [
              },
            ],
            features: [
-             'Légkondi',
-             'Ingyenes WiFi',
-             'Privát fürdőszoba',
-             'TV-vel felszerelt',
+             '4 - 6 főre, 2 szoba',
+             'Fürdőszoba, Terasz, Konyha',
+             'Légkondicionált',
+             'Ingyenes WiFi + TV',
            ],
            disclaimer: 'Az ár az idegenforgalmi adót nem tartalmazza.',
            isHighlighted: false,
          },
          {
-           title: '4 fős comfort',
+           title: '4-fős comfort szoba',
            subtitle: "📍 Kálmán Imre stny. 9, Müller's Hostel",
            eloszezon: 64,
            szezon: 100,
@@ -124,16 +124,16 @@ export const pricings = [
              },
            ],
            features: [
-             'Légkondi',
-             'Ingyenes WiFi',
+             'Légkondicionált',
              'Privát fürdőszoba',
+             'Ingyenes WiFi',
              'TV-vel felszerelt',
            ],
            disclaimer: 'Az ár az idegenforgalmi adót nem tartalmazza.',
            isHighlighted: false,
          },
          {
-           title: 'Udvari Hostel',
+           title: 'Udvari Hostel (ágy)',
            subtitle: "📍 Kálmán Imre stny. 9, Müller's Hostel",
            eloszezon: 16,
            szezon: 19,
@@ -158,20 +158,20 @@ export const pricings = [
              },
            ],
            features: [
-             'Légkondi',
+             'Csőszéfbox (értékmegőrzés)',
+             'Közös fürdőszoba',
              'Ingyenes WiFi',
-             'Privát fürdőszoba',
-             'TV-vel felszerelt',
+             'Konyhasarok hűtővel',
            ],
            disclaimer: 'Az ár az idegenforgalmi adót nem tartalmazza.',
            isHighlighted: false,
          },
          {
-           title: 'Pince Hostel',
+           title: 'Pince Hostel (privát szoba)',
            subtitle: "📍 Kálmán Imre stny. 9, Müller's Hostel",
-           eloszezon: 0,
+           eloszezon: 70,
            szezon: 80,
-           utoszezon: 0,
+           utoszezon: 70,
            link:
              'https://www.booking.com/hotel/hu/muller-s-inn.hu.html?aid=356980;label=gog235jc-1DCAsoZ0IMbXVsbGVyLXMtaW5uSDNYA2i2AYgBAZgBEbgBB8gBDNgBA-gBAYgCAagCA7gCi76z_gXAAgHSAiRkZDUxNDQ5OS01ZWMzLTQ4ZTQtOThhOC1hYjAzZjRhZGMyNmTYAgTgAgE;sid=d79095d1eb660a71d638d76c1603272c;dist=0&keep_landing=1&sb_price_type=total&type=total&',
            images: [
@@ -192,66 +192,73 @@ export const pricings = [
              },
            ],
            features: [
-             'Légkondi',
+             '4 - 6 főre, 1 szoba',
+             'Közös fürdőszoba',
              'Ingyenes WiFi',
-             'Privát fürdőszoba',
-             'TV-vel felszerelt',
+             'Konyhasarok hűtővel',
            ],
            disclaimer: 'Az ár az idegenforgalmi adót nem tartalmazza.',
            isHighlighted: false,
          },
        ];
 
-// export const faq = [
-//   {
-//     id: 'faq-1',
-//     title: 'Flexible access to facilities.',
-//     subtitle: 'Our new key fobs make it so easy!',
-//     text:
-//       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.',
-//     link: 'Check it out',
-//   },
-//   {
-//     id: 'faq-2',
-//     title: 'Snacks, drinks, coffee, and more.',
-//     subtitle: 'Our new key fobs make it so easy!',
-//     text:
-//       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.',
-//     link: 'Check it out',
-//   },
-//   {
-//     id: 'faq-3',
-//     title: 'On site tech support.',
-//     subtitle: 'Our new key fobs make it so easy!',
-//     text:
-//       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.',
-//     link: 'Check it out',
-//   },
-//   {
-//     id: 'faq-4',
-//     title: 'Flexible access to facilities.',
-//     subtitle: 'Our new key fobs make it so easy!',
-//     text:
-//       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.',
-//     link: 'Check it out',
-//   },
-//   {
-//     id: 'faq-5',
-//     title: 'Snacks, drinks, coffee, and more.',
-//     subtitle: 'Our new key fobs make it so easy!',
-//     text:
-//       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.',
-//     link: 'Check it out',
-//   },
-//   {
-//     id: 'faq-6',
-//     title: 'On site tech support.',
-//     subtitle: 'Our new key fobs make it so easy!',
-//     text:
-//       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rerum minima a possimus, amet perferendis, temporibus obcaecati pariatur.',
-//     link: 'Check it out',
-//   },
-// ];
+export const faq = [
+         {
+           id: 'faq-1',
+           title: 'Mikor tudjuk elfoglalni / elhagyni a szállást?',
+           text:
+             'A szobákat 3 órától lehet elfoglalni, viszont reggel 8 órától van lehetőség parkolásra és csomagmegőrzésre a recepciónkon. A távozás napján 10 óráig kell elhagyni a szállást. ✓',
+         },
+         {
+           id: 'faq-2',
+           title: 'Van Klíma és Hűtő a szobákban?',
+           text:
+             'Igen, minden privát szobánk légkondicionálóval és hűtővel van felszerelve. 🥶 🆒',
+         },
+         {
+           id: 'faq-3',
+           title: 'Csomagmegőrzésre van lehetőség?',
+           text:
+             'Igen, a recepció nyitvatartása alatt. 🧳 🛅',
+         },
+         {
+           id: 'faq-4',
+           title: 'Bankkártyával tudok fizetni?',
+           text:
+             'Igen, a szálláshelyen mind bankkártyás, OTP Szépkártyás és készpénzes fizetésre is van lehetőség. 💳 💶',
+         },
+         {
+           id: 'faq-5',
+           title:
+             'A recepció meddig tart nyitva? Ki/bejárás éjjel-nappal lehetséges? ',
+           text:
+             'A recepció a főszezonban 8 - 23 óráig tart nyitva, viszont ki-be járásra mindenidőben van lehetőség. 🏨',
+         },
+         {
+           id: 'faq-6',
+           title: 'Van parkolója a panziónak?',
+           text:
+             'Igen, van. Ingyenes, zárt parkolást a Fő utcai épületünknél tudunk biztosítani minden vendégnek. 🅿️',
+         },
+         {
+           id: 'faq-7',
+           title: 'Reggelire van lehetőség? Az árban benne van?',
+           text:
+             'Reggelizésre van lehetőség a Fő utcai épületünkben. Az árban nincs benne. A reggeli €7-ba kerül. 🍳☕️',
+         },
+         {
+           id: 'faq-7',
+           title: 'Tudok teraszos szobát kérni?',
+           text:
+             'Nem minden szobánk teraszos és ezért nem tudjuk garantálni. Érdemes megkérdezni a recepción, hogy van-e rá lehetőség. A nem teraszos szobákvan van lehetőségük kiülni az előkertbe.',
+         },
+         {
+           id: 'faq-7',
+           title: 'Baráti társasággal érkezünk. Van-e lehetőség grillezésre?',
+           text:
+             'Igen, van kijelölt helyünk grillezésre és baráti társaságok összegyűlésére. A városi csendrendelet betartásával zenehallgatásra is van lehetőség. 🔊 23 órától teljes csendrendelet van a panzióban. 🔇',
+         },
+       ];
 
 // export const plans = [
 //   {

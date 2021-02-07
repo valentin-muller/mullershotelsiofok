@@ -1,8 +1,8 @@
 export const result = [
          {
            cover: {
-             src: '/assets/images/photos/muller/Blog/outside_1.jpg',
-             srcSet: '/assets/images/photos/muller/Blog/outside_1.jpg 2x',
+             src: '/assets/images/photos/muller/Blog/outside_1.jpeg',
+             srcSet: '/assets/images/photos/muller/Blog/outside_1.jpeg 2x',
            },
            title: 'Zöldebbek lettünk!',
            subtitle:

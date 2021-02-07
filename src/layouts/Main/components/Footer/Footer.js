@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import {
   Typography,
   IconButton,
@@ -9,10 +10,10 @@ import {
   List,
   ListItem,
 } from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
+
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 import { Image } from 'components/atoms';
 
@@ -53,10 +54,16 @@ const useStyles = makeStyles(theme => ({
     },
   },
   icon: {
-    fontSize: 24,
+    fontSize: 26,
   },
   copyright: {
     color: 'white',
+  },
+  dataPrivacy: {
+    color: '#FFF',
+    '&:hover': {
+      color: '#f57c00',
+    },
   },
 }));
 
@@ -73,7 +80,7 @@ const Footer = props => {
             <List disablePadding>
               <ListItem disableGutters className={classes.logoContainerItem}>
                 <div className={classes.logoContainer}>
-                  <a href="/" title="thefront">
+                  <a href="/home" title="Mullers">
                     <Image
                       className={classes.logoImage}
                       src="/assets/images/photos/muller/logo_footer.svg"
@@ -85,23 +92,24 @@ const Footer = props => {
               </ListItem>
               <ListItem disableGutters>
                 <IconButton className={classes.socialIcon}>
-                  <FacebookIcon className={classes.icon} />
-                </IconButton>
-                <IconButton className={classes.socialIcon}>
                   <InstagramIcon className={classes.icon} />
                 </IconButton>
                 <IconButton className={classes.socialIcon}>
-                  <TwitterIcon className={classes.icon} />
+                  <MailOutlineIcon className={classes.icon} />
                 </IconButton>
                 <IconButton className={classes.socialIcon}>
-                  <PinterestIcon className={classes.icon} />
+                  <WhatsAppIcon className={classes.icon} />
                 </IconButton>
               </ListItem>
             </List>
           </Grid>
           <ListItem>
             <Typography variant="subtitle1" className={classes.copyright}>
-              © 2020 Muller's, LTD. All rights reserved
+              © 2021 Muller's, LTD. All rights reserved ||{' '}
+              <Link to="/dataPrivacy" className={classes.dataPrivacy}>
+                {' '}
+                Adatkezelési szabályzat{' '}
+              </Link>
             </Typography>
           </ListItem>
         </Grid>

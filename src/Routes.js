@@ -15,6 +15,7 @@ import {
   Blog as BlogView, 
   Gallery as GalleryView,
   Pricing as PricingView,
+  DataPrivacy as DataPrivacyView,
 } from './views';
 
 const Routes = () => {
@@ -50,6 +51,12 @@ const Routes = () => {
         exact
         layout={MainLayout}
         path="/pricing"
+      />
+      <RouteWithLayout
+        component={DataPrivacyView}
+        exact
+        layout={MainLayout}
+        path="/dataPrivacy"
       />
       <Redirect to="/not-found-cover" status="404" />
     </Switch>

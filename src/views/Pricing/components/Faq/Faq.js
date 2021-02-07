@@ -31,7 +31,7 @@ const Faq = props => {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <SectionHeader
-        title="Frequently asked questions"
+        title="Gyakran Ismételt Kérdések"
         titleProps={{
           className: classes.fontWeightBold,
         }}

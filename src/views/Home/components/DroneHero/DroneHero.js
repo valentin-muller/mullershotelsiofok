@@ -12,18 +12,51 @@ const useStyles = makeStyles(theme => ({
     // margin: 'auto',
   },
   typed: {
+    position: 'absolute',
+    zIndex: '1',
     fontWeight: 'bold',
+    overflow: 'auto',
+    whiteSpace: 'nowrap',
+    [theme.breakpoints.up('xl')]: {
+      top: '28%',
+      left: '51%',
+      fontSize: '50px',
+    },
+    [theme.breakpoints.only('lg')]: {
+      top: '28%',
+      left: '50%',
+      fontSize: '45px',
+    },
+    [theme.breakpoints.only('md')]: {
+      top: '28%',
+      left: '50%',
+      fontSize: '35px',
+    },
     [theme.breakpoints.down('sm')]: {
-      height: '30px',
-      fontSize: '40px',
-      minWidth: '100vw',
-      maxWidth: '100vw',
-      position: 'absolute',
+      top: '43%',
+      left: '29%',
     },
   },
   whiteText: {
+    position: 'absolute',
+    zIndex: '1',
     color: 'white',
     fontSize: '55px',
+    [theme.breakpoints.up('xl')]: {
+      top: '28%',
+      left: '30%',
+      fontSize: '50px',
+    },
+    [theme.breakpoints.only('lg')]: {
+      top: '28%',
+      left: '27%',
+      fontSize: '45px',
+    },
+    [theme.breakpoints.only('md')]: {
+      top: '28%',
+      left: '26%',
+      fontSize: '35px',
+    },
     [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
@@ -45,7 +78,7 @@ const DroneHero = props => {
               color="secondary"
               className={classes.typed}
               typedProps={{
-                strings: [' Balaton 🌊', ' Siófok 📍', ' Müllers 🚀'],
+                strings: [' Balaton🌊', ' Siófok📍', ' Müllers🚀'],
                 typeSpeed: 50,
                 loop: true,
               }}

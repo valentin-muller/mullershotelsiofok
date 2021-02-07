@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery, Typography, GridList, GridListTile, IconButton } from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
 import { Image } from 'components/atoms';
 
 const useStyles = makeStyles(theme => ({
@@ -148,21 +144,6 @@ const Content = props => {
             </GridListTile>
           ))}
         </GridList>
-      </div>
-
-      <div>
-        <IconButton className={classes.socialIcon}>
-          <FacebookIcon />
-        </IconButton>
-        <IconButton className={classes.socialIcon}>
-          <InstagramIcon />
-        </IconButton>
-        <IconButton className={classes.socialIcon}>
-          <TwitterIcon />
-        </IconButton>
-        <IconButton className={classes.socialIcon}>
-          <PinterestIcon />
-        </IconButton>
       </div>
     </div>
   );

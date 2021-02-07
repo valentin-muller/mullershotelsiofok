@@ -232,6 +232,16 @@ const Topbar = props => {
             Kontakt
           </Typography>
         </Link>
+        <Link to='/pricing'>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            onClick={() => redirectContact('faq')}
+            className={classes.kontakt}
+          >
+            GY.I.K.
+          </Typography>
+        </Link>
       </Hidden>
 
       <Hidden mdUp>
